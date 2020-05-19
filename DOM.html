@@ -7,6 +7,23 @@
 </head>
 <body>
     <h1>DOM - Document Object Model</h1>
-    
+    <p>DOM - Document Object Model, ou Modelo de Objetos para Documentos. Basicamente é um conjunto de objetos dentro do seu navegador que vai dar acesso aos compenetes internos do seu website. Por isso, o DOM não funciona dentro do node.js, por exemplo.</p>
+    <h2>Árvore DOM</h2>
+    <p>É muito importante fazer a áravore DOM do seu site. Ela deve começar pela raiz, que dentro do navegador chamamos de "window", então tudo do JavaScript está dentro de um objeto chamado "window", que é a janela do seu navegador.</p>
+    <p>Dentro do window temos vários outros objetos, por exemplo: </p>
+    <ul>
+        <li>location - diz qual a localização do seu site (url, página atual, qual foi a página anterior, etc)</li>
+        <li>document - documento atual</li>
+        <li>history - vai guardando de onde você veio e para onde você vai, o que facilita a navegação dentro do seu site</li>
+    </ul>
+    <p>Dentro do "document" tem um outro objeto muito importante que é o "html", e dentro do html temos dois objetos importantes, que é o "head" e o "body". Nesse caso podemos dizer que html é parent de body e head, ou que que body é child de html. Dentro de head temos "meta" e title", dentro de body temos, por exemplo, " h1, p, div e assim por diante</p>
+    <p>Navegando pelo DOM podemos criar os comandos que irão alterar o código html. A seleção de qual elemento será alterado pode ocorrer da seguinte forma:</p>
+    <ul>
+        <li>por Marca - linha de comando <em>getElementsebyTagName()</em> - seleciona todos os objetos de uma mesma tag a não ser que haja uma especificação, que é feita usando colchetes</li>
+        <li>por ID - linha de comando <em>getElementbyId()</em></li>
+        <li>por Nome - linha de comando <em>getElementsbyName()</em></li>
+        <li>por Classe - linha de comando <em>getElementsbyClassName()</em></li>
+        <li>por Seletor (recurso mais recente que não está disponível em todas as versões do ECMAScript) - linha de comando <em>querySelector()</em> ou <em>querySelectorAll()</em></li>
+    </ul>
 </body>
 </html>
