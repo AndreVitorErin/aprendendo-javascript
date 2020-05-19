@@ -51,27 +51,23 @@
     <p>O JS segue a precedência padrão das operações aritméticas (parênteses &lt; potência &lt; multiplicação,divisão e resto &lt; soma e subtração)</p>
     <p>Temos ainda os simbólos de operadores de auto-atribuição. Contando uma variavel do tipo number de nome "n", temos:</p><br>+= &rarr; n = n + valor x <br>-= &rarr; n = n - valor x <br>*= &rarr; n = n * valor x <br>/= &rarr; n = n / valor x <br> %= &rarr; n = n % valor x
     <p>Também temos o incremento e o decremento, que são divididos em pré-incremento ++n &rarr; n + 1 &rarr; soma feita antes da operação, pré-decremento --n &rarr; n - 1 &rarr; subtração feita antes da operação, pós-incremento n++ &rarr; n + 1 &rarr; soma feita após da operação, prós-decremento n-- &rarr; n - 1 &rarr; subtração feita após da operação</p>
+    <p>Também temos os símbolos usados como operadores relacionais, lembrando o o resultado de uma expressão relacional sempre será um valor lógico, ou booleano (verdadeiro / true ou falso / false). Os símbolos dos operadores relacionais são:</p> <br>&lt; &rarr; menor <br>&gt; &rarr; maior <br>&lt;= &rarr; menor ou igual <br>&gt;= &rarr; maior ou igual <br>== &rarr; igual <br>!= &rarr; diferente
+    <p>É necessário destacar que para o JavaScript, quando usamos o símbolo == ele compara apenas o conteúdo e não o tipo, com isso uma expressão 5 == '5' retorna como true (verdadeira), ou seja, ele entende que o 5 enquanto número é igual ao 5 enquanto string. Para que seja feita a comparação de conteúdo e tipo é necessário usar o ===. Nesse caso 5 ==== '5' retorna como false (falso). A mais coisas é válida para o operador de diferença, neste caso usar !==. Esse símbolos são chamados de "operadores de identidade". </p>
+    <img src="opidentidade.jpg" >
+    <img src="opidentidade2.jpg">
+    <p>Para finalizar, é importante conhecer o símbolos usados como operadores lógicos.</p> <br>! &rarr; negação, "não" <br>&& &rarr; conjunção, "e" <br>|| &rarr; disjunção "ou".
+    <p>A precedência dos operadores lógicos é: não &lt; e &lt; ou</p>
+    <p>Lembrando que a ordem de precedência dos operadores é: aritiméticos &lt; relacionais, de identidade &lt; lógicos</p>
+    <p>A última sequência de símbolos que é importante termos em mente são os referentes ao operador ternário, que são o "?" ":" dentro de uma mesma experessão</p>
+    <p>O operador ternário substitui uma operação if-else simples. Sua estrutura é <strong>condição a ser testada</strong> ? <strong>comando caso verdadeiro</strong> : <strong>comando caso falso</strong>. <br>
+    Exemplo: media >= 7 ? aprovado : reprovado</p>
     <h2>Node.js</h2>
-    <p>Abrar abrir o node.js você pode simplesmente clicar sobre o icône dele e executar como qualquer outro aplicativo e ele abrira um prompt de comando, para fechar esse prompt basta digitar ".exit" (sem as aspas). Também é possível abrí-lo usando o VSC, clicando em Terminal &lt; Novo terminal, ou pelo comando ctrl + shit + aspas simples. Nesse caso, o prompt será aberto acoplado no próprio VSC. Para sair, basta escrever "exit" (sem aspas).</p>
+    <p>Para abrir o node.js você pode simplesmente clicar sobre o ícone dele e executar como qualquer outro aplicativo e ele abrira um prompt de comando, para fechar esse prompt basta digitar ".exit" (sem as aspas). Também é possível abrí-lo usando o VSC, clicando em Terminal &lt; Novo terminal, ou pelo comando ctrl + shit + aspas simples. Nesse caso, o prompt será aberto acoplado no próprio VSC. Para sair, basta escrever "exit" (sem aspas).</p>
     <p>Para limpar a tela do terminal, basta dar o comando ctrl + l.</p>
     <h2>Manipulação de dados</h2>
     <p>Depois de conceituar o que são variáveis, basta unir tudo que foi aprendido até agora para começarmos a interagir com o usuário.</p>
     <p>o códio <em>var nome = window.prompt ('qual seu nome?')</em> abrirá uma caixa de diálogo na parte superior do navegador, antes de carregar o código html, e haverá um espaço para que o cliente possa digitar dados, que por sua vez, ficarão salvos na variável nome</p>
     <img src="prompt.jpg">
-    <h2>Alguns comandos</h2>
-    <p>var s = "Teste" <br>var n = 1543.5</p>
-    <ul>
-        <li><em>s.length</em> - conta quandos caracteres tem a string, retorno = 5</li>
-        <li><em>s.toUpperCase()</em> - passa o conteúdo para letras maiúsculas, retorno = TESTE</li>
-        <li><em>s.toLowerCase()</em> - passa o conteúdo para letras minpusculas, retorno = teste</li>
-        <li><em>document.write()</em> - escreve na tela do navegador</li>
-        <li><em>document.writeln()</em> - escreve na tela do navegador e pula uma linha</li>
-        <li><em>n1.toFixed(2)</em> - fixa a quantidade de casas decimais em 2, retorno = 1543.50</li>
-        <li><em>n1.toFixed(2)replace(".",",") - substitui um elemento por outro, nesse caso troca o ponto pela vírgula, retorno = 1543,50</em></li>
-        <li><em>n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'} )</em> - fixa o valor no formato em reais (moeda brasileira), retorno = R$ 1.543,50</li>
-        <li><em>n1.toLocaleString('pt-br', {style: 'currency', currency: 'USD'} )</em> - fixa o valor no formato em dólares (moeda americana), retorno = $ 1.543,50</li>
-        <li><em>n1.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'} )</em> - fixa o valor no formato em euro (moeda brasileira), retorno = &euro; 1.543,50</li>
-    </ul>
-   
+       
 </body>
 </html>
