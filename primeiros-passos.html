@@ -31,7 +31,7 @@
     <p>Mas para que o navegador faça algo com essas informações passada pelo usuário, é preciso que a gente crie comandos dizendo <strong>o que</strong> deve ser feito. E essas instrução são dadas através do uso de <strong>variáveis</strong>.</p>
     <h2>Entendendo a sintaxe do JavaScript</h2>
     <p>Um dos pontos mais importantes na hora de escrever qualquer código é saber quando inserir um comentário. No JS o comentário de linha única é feito após barras duplas (//<em>o comentário vem aqui</em>) e o comentário de múltiplas linhas é feito entre barra asterisco, astericos barra (/*<em>o comentário vem aqui</em>*/).</p>
-    <p>Outro ponto importante é a compreensão dos códigos e sinais. Em JS um único sinal de igual (=) signficiata atribuição e não igualdade. Então na estração x = 0 lemos "x recebe zero". Como JS é uma linguagemd e tipagem fraca, quando vamos declarar uma variável, usamos o termo genérico "var". Para atribuirmos valor a uma variável tipo string ou tipo caractere, podemos utlizar aspas duplas, aspas simples ou colocar entre crases, por exemplo var x = "a" ou var x = 'a' ou então var x = `a`. Existe uma diferença entre essas três formas, mas falaremos disso mais adiante. </p>
+    <p>Como JS é uma linguagemd e tipagem fraca, quando vamos declarar uma variável, usamos o termo genérico "var", "let" ou "const". Para atribuirmos valor a uma variável tipo string ou tipo caractere, podemos utlizar aspas duplas, aspas simples ou colocar entre crases, por exemplo var x = "a" ou var x = 'a' ou então var x = `a`. Existe uma diferença entre essas três formas, mas falaremos disso mais adiante. </p>
     <p>Lembrando que não podemos nomear as variáveis com palavras que o JS usa como comando, por isso é sempre bom verificar a lista de palavras reservadas. Além de todos os critérios de nomeção de variáveis que já discurtimos aqui. Além disso, o JS é case sensitive, ou seja, ele diferencia maiúsculas de minúsculas.</p>
     <p>Em JS temos 3 tipos primitivos principais</p>
     <ul>
@@ -43,7 +43,30 @@
     <img src="typeof.jpg" alt="exemplo typeof">
     <p>Mas como já foi dito, o JS é uma linguagem de tipagem fraca, ou seja, ele aceita que suas variáveis mudem de tipo dependendo do conteúdo recebido.</p>
     <img src="typeof2.jpg" alt="exemplo typeof2">
+    <p>Outro ponto importante é a compreensão dos códigos e sinais. Em JS um único sinal de igual (=) signficiata atribuição e não igualdade. Então na estração x = 0 lemos "x recebe zero". Já o sinal de mais (+) significa concatenação, para significar soma, necessariamente os dois itens relacionados por esse símbolos precisam ser do tipo <strong>number</strong>. Por isso é necessário tomar alguns cuidados. Por exemplo, quando usamos o comando <em>window.prompt</em> ele retorna o valor digitado como uma string, mesmo que tenha sido colocado um número. Nesse caso, será necessário fazer uma conversão de tipos.</p>
+    <p>uma das maneiras de transformar uma string em number é pelo comando <em>Number.parseInt(n)</em>, sendo n o nome da variável. Esse comando transforma o número em inteiro. Para conversão em um número real, o código é <em>Number.parseFloat(n)</em>. Existe também a opção do código <em>Number(n)</em>, que faz a conversão para o tipo adequado, seja inteiro ou real.</p>
+    <p>Para conversão de número para string, temos o código <em>String(n)</em> ou <em>n.toString()</em></p>
+    <p>Outra coisa importante é saber concatenar uma variável a um texto, na forma tradicional temo <em>"meu nome é " + nome</em>, o problema é quando um texto é permeado por muitas variáveis, imagine esse caso <em>"o aluno " + nome + " que mora na rua " + nomerua + " e que atualmente tem " + idade + " anos de idade, tirou " + nota + " na prova"</em>, seria bem complicado de escrever. Nesse caso, existe uma outra forma de sintaxe que seria <em>`o aluno ${nome} que mora na rua ${nomedarua} e que atualmente tem ${idade} anos de idade, tirou nota ${nota}`</em>, nesse caso é importante que a delimitação do texto seja feita com crase.</p>
+    <h2>Node.js</h2>
     <p>Abrar abrir o node.js você pode simplesmente clicar sobre o icône dele e executar como qualquer outro aplicativo e ele abrira um prompt de comando, para fechar esse prompt basta digitar ".exit" (sem as aspas). Também é possível abrí-lo usando o VSC, clicando em Terminal &lt; Novo terminal, ou pelo comando ctrl + shit + aspas simples. Nesse caso, o prompt será aberto acoplado no próprio VSC. Para sair, basta escrever "exit" (sem aspas).</p>
     <p>Para limpar a tela do terminal, basta dar o comando ctrl + l.</p>
+    <h2>Manipulação de dados</h2>
+    <p>Depois de conceituar o que são variáveis, basta unir tudo que foi aprendido até agora para começarmos a interagir com o usuário.</p>
+    <p>o códio <em>var nome = window.prompt ('qual seu nome?')</em> abrirá uma caixa de diálogo na parte superior do navegador, antes de carregar o código html, e haverá um espaço para que o cliente possa digitar dados, que por sua vez, ficarão salvos na variável nome</p>
+    <img src="prompt.jpg">
+    <h2>Alguns comandos</h2>
+    <p>var s = "Teste" <br>var n = 1543.5</p>
+    <ul>
+        <li><em>s.length</em> - conta quandos caracteres tem a string, retorno = 5</li>
+        <li><em>s.toUpperCase()</em> - passa o conteúdo para letras maiúsculas, retorno = TESTE</li>
+        <li><em>s.toLowerCase()</em> - passa o conteúdo para letras minpusculas, retorno = teste</li>
+        <li><em>document.write()</em> - escreve na tela do navegador</li>
+        <li><em>document.writeln()</em> - escreve na tela do navegador e pula uma linha</li>
+        <li><em>n1.toFixed(2)</em> - fixa a quantidade de casas decimais em 2, retorno = 1543.50</li>
+        <li><em>n1.toFixed(2)replace(".",",") - substitui um elemento por outro, nesse caso troca o ponto pela vírgula, retorno = 1543,50</em></li>
+        <li><em>n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'} )</em> - fixa o valor no formato em reais (moeda brasileira), retorno = R$ 1.543,50</li>
+        <li><em>n1.toLocaleString('pt-br', {style: 'currency', currency: 'USD'} )</em> - fixa o valor no formato em dólares (moeda americana), retorno = $ 1.543,50</li>
+        <li><em>n1.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'} )</em> - fixa o valor no formato em euro (moeda brasileira), retorno = &euro; 1.543,50</li>
+    </ul>
 </body>
 </html>
