@@ -29,5 +29,21 @@
         <li>window.prompt - aparece uma mensagem e espaço para entrada de dado através do teclado</li>
     </ul>
     <p>Mas para que o navegador faça algo com essas informações passada pelo usuário, é preciso que a gente crie comandos dizendo <strong>o que</strong> deve ser feito. E essas instrução são dadas através do uso de <strong>variáveis</strong>.</p>
+    <h2>Entendendo a sintaxe do JavaScript</h2>
+    <p>Um dos pontos mais importantes na hora de escrever qualquer código é saber quando inserir um comentário. No JS o comentário de linha única é feito após barras duplas (//<em>o comentário vem aqui</em>) e o comentário de múltiplas linhas é feito entre barra asterisco, astericos barra (/*<em>o comentário vem aqui</em>*/).</p>
+    <p>Outro ponto importante é a compreensão dos códigos e sinais. Em JS um único sinal de igual (=) signficiata atribuição e não igualdade. Então na estração x = 0 lemos "x recebe zero". Como JS é uma linguagemd e tipagem fraca, quando vamos declarar uma variável, usamos o termo genérico "var". Para atribuirmos valor a uma variável tipo string ou tipo caractere, podemos utlizar aspas duplas, aspas simples ou colocar entre crases, por exemplo var x = "a" ou var x = 'a' ou então var x = `a`. Existe uma diferença entre essas três formas, mas falaremos disso mais adiante. </p>
+    <p>Lembrando que não podemos nomear as variáveis com palavras que o JS usa como comando, por isso é sempre bom verificar a lista de palavras reservadas. Além de todos os critérios de nomeção de variáveis que já discurtimos aqui. Além disso, o JS é case sensitive, ou seja, ele diferencia maiúsculas de minúsculas.</p>
+    <p>Em JS temos 3 tipos primitivos principais</p>
+    <ul>
+        <li>Number - seus principais subtipos são o Infinity e o NaN (not a number)</li>
+        <li>String</li>
+        <li>Boolean</li>
+    </ul>
+    <p>Também existe os tipos: null; undefined; object - que contém um subtipo importante, o array; function.Para descobrir qual é o tipo primitivo daquela variável, existe o código de comando <em>typeof</em></p>
+    <img src="typeof.jpg" alt="exemplo typeof">
+    <p>Mas como já foi dito, o JS é uma linguagem de tipagem fraca, ou seja, ele aceita que suas variáveis mudem de tipo dependendo do conteúdo recebido.</p>
+    <img src="typeof2.jpg" alt="exemplo typeof2">
+    <p>Abrar abrir o node.js você pode simplesmente clicar sobre o icône dele e executar como qualquer outro aplicativo e ele abrira um prompt de comando, para fechar esse prompt basta digitar ".exit" (sem as aspas). Também é possível abrí-lo usando o VSC, clicando em Terminal &lt; Novo terminal, ou pelo comando ctrl + shit + aspas simples. Nesse caso, o prompt será aberto acoplado no próprio VSC. Para sair, basta escrever "exit" (sem aspas).</p>
+    <p>Para limpar a tela do terminal, basta dar o comando ctrl + l.</p>
 </body>
 </html>
