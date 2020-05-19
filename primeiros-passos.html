@@ -47,6 +47,10 @@
     <p>uma das maneiras de transformar uma string em number é pelo comando <em>Number.parseInt(n)</em>, sendo n o nome da variável. Esse comando transforma o número em inteiro. Para conversão em um número real, o código é <em>Number.parseFloat(n)</em>. Existe também a opção do código <em>Number(n)</em>, que faz a conversão para o tipo adequado, seja inteiro ou real.</p>
     <p>Para conversão de número para string, temos o código <em>String(n)</em> ou <em>n.toString()</em></p>
     <p>Outra coisa importante é saber concatenar uma variável a um texto, na forma tradicional temo <em>"meu nome é " + nome</em>, o problema é quando um texto é permeado por muitas variáveis, imagine esse caso <em>"o aluno " + nome + " que mora na rua " + nomerua + " e que atualmente tem " + idade + " anos de idade, tirou " + nota + " na prova"</em>, seria bem complicado de escrever. Nesse caso, existe uma outra forma de sintaxe que seria <em>`o aluno ${nome} que mora na rua ${nomedarua} e que atualmente tem ${idade} anos de idade, tirou nota ${nota}`</em>, nesse caso é importante que a delimitação do texto seja feita com crase.</p>
+    <p>O sinal de menos (-) significa subtração; a barra simples é divisão real (/), ou seja, aquela em que o resultado é um número real, por exemplo 5/2 = 2.5; o asterísco é múltiplicação (*); o símbolo de procentagem é o resto da divisão inteira (%), por exemplo 5 % 2 = 1; e o asterisco duplo (**) é a potência, e surgiu nas últimas verões do ECMAScript</p>
+    <p>O JS segue a precedência padrão das operações aritméticas (parênteses &lt; potência &lt; multiplicação,divisão e resto &lt; soma e subtração)</p>
+    <p>Temos ainda os simbólos de operadores de auto-atribuição. Contando uma variavel do tipo number de nome "n", temos:</p><br>+= &rarr; n = n + valor x <br>-= &rarr; n = n - valor x <br>*= &rarr; n = n * valor x <br>/= &rarr; n = n / valor x <br> %= &rarr; n = n % valor x
+    <p>Também temos o incremento e o decremento, que são divididos em pré-incremento ++n &rarr; n + 1 &rarr; soma feita antes da operação, pré-decremento --n &rarr; n - 1 &rarr; subtração feita antes da operação, pós-incremento n++ &rarr; n + 1 &rarr; soma feita após da operação, prós-decremento n-- &rarr; n - 1 &rarr; subtração feita após da operação</p>
     <h2>Node.js</h2>
     <p>Abrar abrir o node.js você pode simplesmente clicar sobre o icône dele e executar como qualquer outro aplicativo e ele abrira um prompt de comando, para fechar esse prompt basta digitar ".exit" (sem as aspas). Também é possível abrí-lo usando o VSC, clicando em Terminal &lt; Novo terminal, ou pelo comando ctrl + shit + aspas simples. Nesse caso, o prompt será aberto acoplado no próprio VSC. Para sair, basta escrever "exit" (sem aspas).</p>
     <p>Para limpar a tela do terminal, basta dar o comando ctrl + l.</p>
@@ -68,5 +72,6 @@
         <li><em>n1.toLocaleString('pt-br', {style: 'currency', currency: 'USD'} )</em> - fixa o valor no formato em dólares (moeda americana), retorno = $ 1.543,50</li>
         <li><em>n1.toLocaleString('pt-br', {style: 'currency', currency: 'EUR'} )</em> - fixa o valor no formato em euro (moeda brasileira), retorno = &euro; 1.543,50</li>
     </ul>
+   
 </body>
 </html>
