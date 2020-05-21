@@ -25,5 +25,23 @@
         <li>por Classe - linha de comando <em>getElementsbyClassName()</em></li>
         <li>por Seletor (recurso mais recente que não está disponível em todas as versões do ECMAScript) - linha de comando <em>querySelector()</em> ou <em>querySelectorAll()</em></li>
     </ul>
+    <h2>Eventos DOM</h2>
+    <p>Evento: tudo aquilo que <u>pode</u> acontecer com qualquer elemento. O mais comum são os eventos de mouse. Por exemplo, eventos que podemo acontecer com uma div</p>
+    <ul>
+        <li>mouseenter - evento disparado quando o mouse entra na div</li>
+        <li>mousemove - evento disparado quando o mouse está se movendo pela div, e enquanto o mouse continuar esse movimento, o evento continuará sendo disparado</li>
+        <li>mousedown - evento disparado quando apertamos o botão do mouse sobre a div, o evento continuará sendo disparado enquanto o botão permanecer apertado </li>
+        <li>mouseup - evento disparado quando soltamos o botão do mouse </li>
+        <li>click - evento disparado quando apertamos e soltamos o botão rapidamente sobre a div</li>
+        <li>mouseout - evento disparado quando o mouse sai da div</li>
+    </ul>
+    <p>Esses foram alguns exemplos simples. A lista de eventos possíveis é enorme, e nem todos os elementos são compatívies com todos os eventos, alguns são específicos. Para conhecer todos os eventos o recomendável é procurar diretamente pelas listas de referências.</p>
+    <p>Com a popularização dos aparelhos portáteis, hoje temos, por exemplos os touchs events, que são diferentes dos mouses events.</p>
+    <p>Para entender melhor eventos, antes é necessário entender o que é uma <strong>função</strong>, que é um conjunto de linhas de códigos que só serão executados quando um evento ocorrer. Esse conjuntos de linhas é chamado de <strong>bloco</strong></p>
+    <p>Os blocos em JS são reconhecidos por serem escritos entre chaves ({}). Para que esse bloco seja reconhecido como uma função, ele deve ser nomeado com o nome <em>function</em> + a ação que será realizada. A estrutura ficará dessa forma:</p>
+    <p><em>function <strong>nome-ação</strong>(){ <br>
+    }</em></p>
+    <p>Dentro do parênteses que vem após o nome poderá ou não ser colocado algum parâmetro.</p>
+    <p>Quando começamos a incerir eventos e códigos mais complexos é comum que ocorram erros. Então caso você abra seu programa no navegador para testar e ele não execute corretamente, clique com o botão direito do mouse dentro do navegador, escolha a opção "inspecionar". Essa opção irá abrir a dev tools, e no menu superior, no canto esquerto, vai aparecer a sinalização de um erro.Clicando no x em vermelho, que representa o erro, abrirá a descrição desse erro, e em qual linha ele ocorreu. A partir disso, você deve verificar dessa linha pra cima.</p>
 </body>
 </html>
