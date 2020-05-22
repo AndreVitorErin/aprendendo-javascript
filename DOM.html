@@ -1,58 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>DOM - Document Object Model</h1>
-    <p>DOM - Document Object Model, ou Modelo de Objetos para Documentos. Basicamente é um conjunto de objetos dentro do seu navegador que vai dar acesso aos compenetes internos do seu website. Por isso, o DOM não funciona dentro do node.js, por exemplo. Ele representa uma árvore de objetos em memória, ou seja, mapeia documentos HTML em objetos.</p>
+    <p>
+      DOM - Document Object Model, ou Modelo de Objetos para Documentos.
+      Basicamente é um conjunto de objetos dentro do seu navegador que vai dar
+      acesso aos compenetes internos do seu website. Por isso, o DOM não
+      funciona dentro do node.js, por exemplo. Ele representa uma árvore de
+      objetos em memória, ou seja, mapeia documentos HTML em objetos.
+    </p>
     <h2>Árvore DOM</h2>
-    <p>É muito importante fazer a áravore DOM do seu site. Ela deve começar pela raiz, que dentro do navegador chamamos de "window", então tudo do JavaScript está dentro de um objeto chamado "window", que é a janela do seu navegador.</p>
-    <p>Dentro do window temos vários outros objetos, por exemplo: </p>
+    <p>
+      É muito importante fazer a áravore DOM do seu site. Ela deve começar pela
+      raiz, que dentro do navegador chamamos de "window", então tudo do
+      JavaScript está dentro de um objeto chamado "window", que é a janela do
+      seu navegador.
+    </p>
+    <p>Dentro do window temos vários outros objetos, por exemplo:</p>
     <ul>
-        <li>location - diz qual a localização do seu site (url, página atual, qual foi a página anterior, etc)</li>
-        <li>document - documento atual</li>
-        <li>history - vai guardando de onde você veio e para onde você vai, o que facilita a navegação dentro do seu site</li>
+      <li>
+        location - diz qual a localização do seu site (url, página atual, qual
+        foi a página anterior, etc)
+      </li>
+      <li>document - documento atual</li>
+      <li>
+        history - vai guardando de onde você veio e para onde você vai, o que
+        facilita a navegação dentro do seu site
+      </li>
     </ul>
-    <p>Dentro do "document" tem um outro objeto muito importante que é o "html", e dentro do html temos dois objetos importantes, que é o "head" e o "body". Nesse caso podemos dizer que html é parent de body e head, ou que que body é child de html. Dentro de head temos "meta" e title", dentro de body temos, por exemplo, " h1, p, div e assim por diante</p>
-    <p>Navegando pelo DOM podemos criar os comandos que irão alterar o código html. A seleção de qual elemento será alterado pode ocorrer da seguinte forma:</p>
+    <p>
+      Dentro do "document" tem um outro objeto muito importante que é o "html",
+      e dentro do html temos dois objetos importantes, que é o "head" e o
+      "body". Nesse caso podemos dizer que html é parent de body e head, ou que
+      que body é child de html. Dentro de head temos "meta" e title", dentro de
+      body temos, por exemplo, " h1, p, div e assim por diante
+    </p>
+    <p>
+      Navegando pelo DOM podemos criar os comandos que irão alterar o código
+      html. A seleção de qual elemento será alterado pode ocorrer da seguinte
+      forma:
+    </p>
     <ul>
-        <li>por Marca - linha de comando <em>getElementsebyTagName()</em> - seleciona todos os objetos de uma mesma tag a não ser que haja uma especificação, que é feita usando colchetes</li>
-        <li>por ID - linha de comando <em>getElementbyId()</em></li>
-        <li>por Nome - linha de comando <em>getElementsbyName()</em></li>
-        <li>por Classe - linha de comando <em>getElementsbyClassName()</em></li>
-        <li>por Seletor (recurso mais recente que não está disponível em todas as versões do ECMAScript) - linha de comando <em>querySelector()</em> ou <em>querySelectorAll()</em></li>
+      <li>
+        por Marca - linha de comando <em>getElementsebyTagName()</em> -
+        seleciona todos os objetos de uma mesma tag a não ser que haja uma
+        especificação, que é feita usando colchetes
+      </li>
+      <li>por ID - linha de comando <em>getElementbyId()</em></li>
+      <li>por Nome - linha de comando <em>getElementsbyName()</em></li>
+      <li>por Classe - linha de comando <em>getElementsbyClassName()</em></li>
+      <li>
+        por Seletor (recurso mais recente que não está disponível em todas as
+        versões do ECMAScript) - linha de comando <em>querySelector()</em> ou
+        <em>querySelectorAll()</em>
+      </li>
     </ul>
-    <p>A criação de todos esse parâmetros é algo muito demorado, e por isso, atualmente temos frameworks que realizam essa tarefa repetitiva, permitindo que o programador se ocupe de outras atividades que exigem o raciocínio humano.</p>
-    <p>Quando ao modo de seleção dos elementos, atualmente o mais recomendado é o querySelector, que funciona de 3 formas:</p>
+    <p>
+      A criação de todos esse parâmetros é algo muito demorado, e por isso,
+      atualmente temos frameworks que realizam essa tarefa repetitiva,
+      permitindo que o programador se ocupe de outras atividades que exigem o
+      raciocínio humano.
+    </p>
+    <p>
+      Quando ao modo de seleção dos elementos, atualmente o mais recomendado é o
+      querySelector, que funciona de 3 formas:
+    </p>
     <ul>
-        <li>Elemento - seleciona todos os elementos de determinado tipo. Ex: <em>querySelector('p')</em> irá selecionar o primeiro parágrafos</li>
-        <li>Classe - seleciona o primeiro elementos que perteça uma classe predeterminada. Ex: <em>querySelector('.minhaclasse')</em>. Nesse caso é necessário colocar o ponto (.) seguido pelo nome da classe (Class)</li>
-        <li>ID - seleciona um elemento que possui uma identificação específica. Ex: <em>querySelector('#meuId')</em>. Nesse caso é necessário colocar a hashtag (#) seguida pelo nome da identificação (Id) </li>
+      <li>
+        Elemento - seleciona todos os elementos de determinado tipo. Ex:
+        <em>querySelector('p')</em> irá selecionar o primeiro parágrafos
+      </li>
+      <li>
+        Classe - seleciona o primeiro elementos que perteça uma classe
+        predeterminada. Ex: <em>querySelector('.minhaclasse')</em>. Nesse caso é
+        necessário colocar o ponto (.) seguido pelo nome da classe (Class)
+      </li>
+      <li>
+        ID - seleciona um elemento que possui uma identificação específica. Ex:
+        <em>querySelector('#meuId')</em>. Nesse caso é necessário colocar a
+        hashtag (#) seguida pelo nome da identificação (Id)
+      </li>
     </ul>
-    <p>Para selecionar todos os elementos de um determinado tipo ou de uma determinada classe, devemos utilizar o comando <em>querySelectorAll</em>.</p>
+    <p>
+      Para selecionar todos os elementos de um determinado tipo ou de uma
+      determinada classe, devemos utilizar o comando <em>querySelectorAll</em>.
+    </p>
     <h2>Eventos DOM</h2>
-    <p>Evento: tudo aquilo que <u>pode</u> acontecer com qualquer elemento. O mais comum são os eventos de mouse. Por exemplo, eventos que podemo acontecer com uma div</p>
+    <p>
+      Representa o "quando" das aplicações. É algo que acontece após uma
+      determinada ocorrência, mas diferente das estruturas condicionais, não
+      sabemos quando esse isto irá ocorrer. Podemos dizer que um evento
+      <strong>reage</strong> a uma ação, que é um princípio da programação
+      reativa.
+    </p>
     <ul>
-        <li>mouseenter - evento disparado quando o mouse entra na div</li>
-        <li>mousemove - evento disparado quando o mouse está se movendo pela div, e enquanto o mouse continuar esse movimento, o evento continuará sendo disparado</li>
-        <li>mousedown - evento disparado quando apertamos o botão do mouse sobre a div, o evento continuará sendo disparado enquanto o botão permanecer apertado </li>
-        <li>mouseup - evento disparado quando soltamos o botão do mouse </li>
-        <li>click - evento disparado quando apertamos e soltamos o botão rapidamente sobre a div</li>
-        <li>mouseout - evento disparado quando o mouse sai da div</li>
+      <li>mouseenter - evento disparado quando o mouse entra no elemento</li>
+      <li>
+        mousemove - evento disparado quando o mouse está se movendo pelo
+        elemento, e enquanto o mouse continuar esse movimento, o evento
+        continuará sendo disparado
+      </li>
+      <li>
+        mousedown - evento disparado quando apertamos o botão do mouse sobre o
+        elemento, o evento continuará sendo disparado enquanto o botão
+        permanecer apertado
+      </li>
+      <li>mouseup - evento disparado quando soltamos o botão do mouse</li>
+      <li>
+        click - evento disparado quando apertamos e soltamos o botão rapidamente
+        sobre o elemento
+      </li>
+      <li>mouseout - evento disparado quando o mouse sai do elemento</li>
+      <li>onmouseover - mouse passou sobre o elemento</li>
+      <li>onload - após o carregamento da página</li>
+      <li>onchange - o conteúdo do elemento é alterado</li>
+      <li>onfocus - o elemento recebe foco</li>
+      <li>onblur - o elemento perder o foco</li>
+      <li>onselect - o elemento é selecionado (mais usado em checkboxes)</li>
+      <li>onsubmit - dados do formulário são enviados ao servidos</li>
+      <li>onkeydown - tecla pressionada</li>
+      <li>onkeypress - tecla pressionada e solta</li>
+      <li>onkeyup - tecla solta</li>
     </ul>
-    <p>Esses foram alguns exemplos simples. A lista de eventos possíveis é enorme, e nem todos os elementos são compatívies com todos os eventos, alguns são específicos. Para conhecer todos os eventos o recomendável é procurar diretamente pelas listas de referências.</p>
-    <p>Com a popularização dos aparelhos portáteis, hoje temos, por exemplos os touchs events, que são diferentes dos mouses events.</p>
-    <p>Para entender melhor eventos, antes é necessário entender o que é uma <strong>função</strong>, que é um conjunto de linhas de códigos que só serão executados quando um evento ocorrer. Esse conjuntos de linhas é chamado de <strong>bloco</strong></p>
-    <p>Os blocos em JS são reconhecidos por serem escritos entre chaves ({}). Para que esse bloco seja reconhecido como uma função, ele deve ser nomeado com o nome <em>function</em> + a ação que será realizada. A estrutura ficará dessa forma:</p>
-    <p><em>function <strong>nome-ação</strong>(){ <br>
-    }</em></p>
-    <p>Dentro do parênteses que vem após o nome poderá ou não ser colocado algum parâmetro.</p>
-    <p>Quando começamos a incerir eventos e códigos mais complexos é comum que ocorram erros. Então caso você abra seu programa no navegador para testar e ele não execute corretamente, clique com o botão direito do mouse dentro do navegador, escolha a opção "inspecionar". Essa opção irá abrir a dev tools, e no menu superior, no canto esquerto, vai aparecer a sinalização de um erro.Clicando no x em vermelho, que representa o erro, abrirá a descrição desse erro, e em qual linha ele ocorreu. A partir disso, você deve verificar dessa linha pra cima.</p>
+    <p>
+      Esses foram alguns exemplos simples. A lista de eventos possíveis é
+      enorme, e nem todos os elementos são compatívies com todos os eventos,
+      alguns são específicos. Para conhecer todos os eventos o recomendável é
+      procurar diretamente pelas listas de referências.
+    </p>
+    <p>
+      Com a popularização dos aparelhos portáteis, hoje temos, por exemplos os
+      touchs events, que são diferentes dos mouses events.
+    </p>
+    <p>
+      Para entender melhor eventos, antes é necessário entender o que é uma
+      <strong>função</strong>, que é um conjunto de linhas de códigos que só
+      serão executados quando um evento ocorrer. Esse conjuntos de linhas é
+      chamado de <strong>bloco</strong>
+    </p>
+    <p>
+      Os blocos em JS são reconhecidos por serem escritos entre chaves ({}).
+      Para que esse bloco seja reconhecido como uma função, ele deve ser nomeado
+      com o nome <em>function</em> + a ação que será realizada. A estrutura
+      ficará dessa forma:
+    </p>
+    <p>
+      <em
+        >function <strong>nome-ação</strong>(){ <br />
+        }</em
+      >
+    </p>
+    <p>
+      Dentro do parênteses que vem após o nome poderá ou não ser colocado algum
+      parâmetro.
+    </p>
+    <p>
+      Quando começamos a incerir eventos e códigos mais complexos é comum que
+      ocorram erros. Então caso você abra seu programa no navegador para testar
+      e ele não execute corretamente, clique com o botão direito do mouse dentro
+      do navegador, escolha a opção "inspecionar". Essa opção irá abrir a dev
+      tools, e no menu superior, no canto esquerto, vai aparecer a sinalização
+      de um erro.Clicando no x em vermelho, que representa o erro, abrirá a
+      descrição desse erro, e em qual linha ele ocorreu. A partir disso, você
+      deve verificar dessa linha pra cima.
+    </p>
     <h2>Propriedade style</h2>
-    <p>Assim como modificamos o documento HTML através dos comandos do DOM, também é possível modificar o CSS diretamente através da propriedade style. Entretando, esta <strong>não é</strong> uma boa prática, pois não é interessante injetarmos código CSS em nosso JavaScript. Uma boa prática seria a adição e remoção de classes.</p>
-    <p>Para isso, utilizamos os comandos <em>classList.add()</em> e <em>classeList.remove()</em>, sendo que um adiciona e outro remove um elemento da lista.</p>
-</body>
+    <p>
+      Assim como modificamos o documento HTML através dos comandos do DOM,
+      também é possível modificar o CSS diretamente através da propriedade
+      style. Entretando, esta <strong>não é</strong> uma boa prática, pois não é
+      interessante injetarmos código CSS em nosso JavaScript. Uma boa prática
+      seria a adição e remoção de classes.
+    </p>
+    <p>
+      Para isso, utilizamos os comandos <em>classList.add()</em> e
+      <em>classeList.remove()</em>, sendo que um adiciona e outro remove um
+      elemento da lista.
+    </p>
+    <h2>Evitando envio de dados ao servidor</h2>
+    <p>
+      Por padrão, ao clicar em um botão do tipo submit de um formulário HTML os
+      dados são enviados ao servidor e a página é recarregada.
+    </p>
+    <p>
+      Atualmente, grande parte dos sistemas web funciona como SPA - Single Page
+      Application, deste modo, deve-se evitar o <strong>refresh</strong> com
+      <em>event.preventDefault</em>. Nesse modelo, os dados reagem às interações
+      do usuário instantaneamente.
+    </p>
+  </body>
 </html>
