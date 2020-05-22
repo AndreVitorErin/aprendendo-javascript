@@ -103,6 +103,12 @@
     <p>O Object não é um tipo primitivo (A diferenciação entre tipo primitivo e tipo não primitivo diz respeito a questões de gerenciamento de memória). Quando os elementos do objeto são delimitados por colchetes ([]) eles são arrays (vetores), mas em JS arrays são um tipo de objeto. Um objetos "de fato" é delimitado por chaves ({}), esta é a base do formato .json. Arrays tão somente valores, enquanto os objetos de fato eles tem um par (identificador e valor que são separados por dois pontos ":", e cada par é separado por uma vírgula).</p>
     <p>Apesar de haver tipos definidos em JS, ela é uma linguagem de tipagem fraca. Isso que dizer que você pode criar uma variavel do tipo number e posteriormente atribuir um valor string pra ela, por exemplo. Existe a possibilidade da adoção do typescrip, que é uma linguagem que envolve o JS e adiciona diversas funcionalidade, entre elas uma tipagem forte.</p>
     <p>false, 0, null e undefined são considerados <em>falsy</em>, ou seja, eles tendem a ser considerados como falso quando passam por uma estrutura de decisão.</p>
+    <h2>Funções</h2>
+    <p>São um bloco de código que executa algum tipo de algorítmo, mas ela <strong>não</strong> é executada imediatamente, mas deve ser invocada.</p>
+    <p>Esse tipo de organização permite a <strong>reutilização</strong> da lógica empregada, o que gera economia de código.</p>
+    <p>Uma função pode aceitar <strong>parâmetros</strong>, também conhecidos como <strong>argumentos</strong>. Pode retornar <strong>zero</strong>(ou seja, nada) ou apenas <strong>um</strong> valor. Caso você precise retornar mais de um valor, você deve agrupar suas funções em um objeto.</p>
+    <p>Aplicações são recheadas de funções, pois elas ajudam a organizar melhor seu código. Vamos pensar em um exemplo simples: você cria a função soma que é a+b; aparentemente você poderia escrever isso no corpo do código sem problemas, mas vamos imaginar que essa mesma função se repete 100 vezes, mesmo assim daria o melhor trabalho chamar a função ou escrever no código. Mas agora imagine que a regra de negócio mudou e agora soma é a+b-2. Se você tem isso encapsulado em uma função, basta você mudar os parâmetros dela, e todos os pontos em que ela aparece serão automaticamente modificados. Caso esteja no corpo do código, você teria que alterar os 100 pontos em que essa operação aparece, e caso esqueça algum, isso poderia trazer grandes prejuízos.</p>
+    <p></p>
     
     
        
