@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>DOM - Document Object Model</h1>
-    <p>DOM - Document Object Model, ou Modelo de Objetos para Documentos. Basicamente é um conjunto de objetos dentro do seu navegador que vai dar acesso aos compenetes internos do seu website. Por isso, o DOM não funciona dentro do node.js, por exemplo.</p>
+    <p>DOM - Document Object Model, ou Modelo de Objetos para Documentos. Basicamente é um conjunto de objetos dentro do seu navegador que vai dar acesso aos compenetes internos do seu website. Por isso, o DOM não funciona dentro do node.js, por exemplo. Ele representa uma árvore de objetos em memória, ou seja, mapeia documentos HTML em objetos.</p>
     <h2>Árvore DOM</h2>
     <p>É muito importante fazer a áravore DOM do seu site. Ela deve começar pela raiz, que dentro do navegador chamamos de "window", então tudo do JavaScript está dentro de um objeto chamado "window", que é a janela do seu navegador.</p>
     <p>Dentro do window temos vários outros objetos, por exemplo: </p>
@@ -25,6 +25,14 @@
         <li>por Classe - linha de comando <em>getElementsbyClassName()</em></li>
         <li>por Seletor (recurso mais recente que não está disponível em todas as versões do ECMAScript) - linha de comando <em>querySelector()</em> ou <em>querySelectorAll()</em></li>
     </ul>
+    <p>A criação de todos esse parâmetros é algo muito demorado, e por isso, atualmente temos frameworks que realizam essa tarefa repetitiva, permitindo que o programador se ocupe de outras atividades que exigem o raciocínio humano.</p>
+    <p>Quando ao modo de seleção dos elementos, atualmente o mais recomendado é o querySelector, que funciona de 3 formas:</p>
+    <ul>
+        <li>Elemento - seleciona todos os elementos de determinado tipo. Ex: <em>querySelector('p')</em> irá selecionar o primeiro parágrafos</li>
+        <li>Classe - seleciona o primeiro elementos que perteça uma classe predeterminada. Ex: <em>querySelector('.minhaclasse')</em>. Nesse caso é necessário colocar o ponto (.) seguido pelo nome da classe (Class)</li>
+        <li>ID - seleciona um elemento que possui uma identificação específica. Ex: <em>querySelector('#meuId')</em>. Nesse caso é necessário colocar a hashtag (#) seguida pelo nome da identificação (Id) </li>
+    </ul>
+    <p>Para selecionar todos os elementos de um determinado tipo ou de uma determinada classe, devemos utilizar o comando <em>querySelectorAll</em>.</p>
     <h2>Eventos DOM</h2>
     <p>Evento: tudo aquilo que <u>pode</u> acontecer com qualquer elemento. O mais comum são os eventos de mouse. Por exemplo, eventos que podemo acontecer com uma div</p>
     <ul>
