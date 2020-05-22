@@ -64,11 +64,18 @@
     <h2>Node.js</h2>
     <p>Para abrir o node.js você pode simplesmente clicar sobre o ícone dele e executar como qualquer outro aplicativo e ele abrira um prompt de comando, para fechar esse prompt basta digitar ".exit" (sem as aspas). Também é possível abrí-lo usando o VSC, clicando em Terminal &lt; Novo terminal, ou pelo comando ctrl + shit + aspas simples. Nesse caso, o prompt será aberto acoplado no próprio VSC. Para sair, basta escrever "exit" (sem aspas).</p>
     <p>Para limpar a tela do terminal, basta dar o comando ctrl + l.</p>
+    <p>Em JS, assim como na maioria das linguagem, há a opção de comentário, que se divide em dois tipos:</p>
+    <ul>
+        <li>Comentário de linha - seu símbolo é a barra dupla (// Comentário vem aqui)</li>
+        <li>Comentário de bloco, ou multiplas linhas - seu simbolos é o barra asterisco, asterisco barra (/* Comentário vem aqui */)</li>
+    </ul>
+    <p>Apesar de não ser obrigatório dar espaço após o símbolo de incío do comentário, essa é uma boa prática de código, que poderá ser levada em consideração em um processo seletivo, por exemplo.</p>
     <h2>Manipulação de dados</h2>
     <p>Depois de conceituar o que são variáveis, basta unir tudo que foi aprendido até agora para começarmos a interagir com o usuário.</p>
     <p>o códio <em>var nome = window.prompt ('qual seu nome?')</em> abrirá uma caixa de diálogo na parte superior do navegador, antes de carregar o código html, e haverá um espaço para que o cliente possa digitar dados, que por sua vez, ficarão salvos na variável nome</p>
     <img src="prompt.jpg">
     <p>Para que o JS possa escrever na tela do node.js, o comando utilizado é o <em>console.log</em> em vez do <em>document.write</em></p>
+    <p>O console é muito importante para depurarmos (ou debuggarmos) o código.</p>
     <h2>Estruturas condicionais</h2>
     <p>Assim como na maioria das linguagens imperativas, os comandos submetidos a condições deve ser contidos dentro de blocos, representados entre chaves ({})</p>
     <p><em>if (condição){ <br>
@@ -93,7 +100,11 @@
     <p>Alguns comentários importantes:</p>
     <p>Em JS tanto número inteiros quanto os reais fazem parte do tipo Number, ao contrário de muitas linguagem que separam essas duas categorias.O tipo String pode ser colocado entre aspas simples (mais usado), aspas duplas (muitas vezes usadas em frameworks, onde em algumas expressões haverá uma nova string dentro dela - caso especial para ser estudado mais adiante)  ou entre crases (uso especial que surgiu nas versões mais recentes).</p>
     <p>Existe uma confusão entre o tipo Null e Undefined, que são bastantes semelhantes entre si. A principal diferença é que o Null não é trazido automaticamente pelo JS, ou seja, o programador tem que declarar o valor null. Quando existe um valor não declarado ainda, o JS retorna como undefined. </p>
-    <p>O Object não é um tipo primitivo p>
+    <p>O Object não é um tipo primitivo (A diferenciação entre tipo primitivo e tipo não primitivo diz respeito a questões de gerenciamento de memória). Quando os elementos do objeto são delimitados por colchetes ([]) eles são arrays (vetores), mas em JS arrays são um tipo de objeto. Um objetos "de fato" é delimitado por chaves ({}), esta é a base do formato .json. Arrays tão somente valores, enquanto os objetos de fato eles tem um par (identificador e valor que são separados por dois pontos ":", e cada par é separado por uma vírgula).</p>
+    <p>Apesar de haver tipos definidos em JS, ela é uma linguagem de tipagem fraca. Isso que dizer que você pode criar uma variavel do tipo number e posteriormente atribuir um valor string pra ela, por exemplo. Existe a possibilidade da adoção do typescrip, que é uma linguagem que envolve o JS e adiciona diversas funcionalidade, entre elas uma tipagem forte.</p>
+    <p>false, 0, null e undefined são considerados <em>falsy</em>, ou seja, eles tendem a ser considerados como falso quando passam por uma estrutura de decisão.</p>
+    
+    
        
 </body>
 </html>
