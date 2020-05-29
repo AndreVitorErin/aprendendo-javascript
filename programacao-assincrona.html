@@ -45,5 +45,79 @@
       passadas pos parâmetros em funções que irão utilizar de alguma forma a Web
       APIs (eventos de DOM, requisições HTTP, timeouts, etc)
     </p>
+    <h2>Funções setTimeout e setInterval</h2>
+    <h3>SetTimeout</h3>
+    <p>
+      Utilizado quando você quer postergar a execução de uma função. O tempo de
+      atraso é configurável em milissegundos. Porém, não há garantia que a
+      execução aconteça exatamente no prazo programado, pois isso depende da
+      callback queue, se ela está limpa. Caso ela não esteja, ele entra na fila
+      e será executado dentro da ordem de execução.
+    </p>
+    <h3>SetInterval</h3>
+    <p>
+      É semelhante ao setTimeout, mas repete a execução a cada x milissegundos,
+      e pode ser cancelado com <strong>clearInterval</strong>, para isso,
+      devemos guardar a referência em uma variável.
+    </p>
+    <h2>Requisições HTTP com JavaScript</h2>
+    <h3>Comando Fetch</h3>
+    <p>
+      Comando usado por padrão em JavaScriptpara fazer requisições HTTP. Ele
+      trabalha internamente com promises.
+    </p>
+    <p>
+      O fetch possui dois retornos. O primeiro retorno são dados binários, e em
+      geral, convertemos esses dados para JSON, que retonra outra promise
+      (seguno retorno).
+    </p>
+    <code>
+      <pre>
+        fetch('https://api.github.com/user/rrgomide').then((res) => {
+          res.json().then(data => {
+            showData(data);
+          });
+        });
+
+        function showData(data){
+          const user = document.querySelector('#user');
+          user.textContent = data.login + ' ' + data.name
+        }
+      </pre>
+    </code>
+    <p>
+      No código acima, será passada a função fetch, o termo "then" simboliza o
+      que deve ser feito quando a promise for concluída, pegamos o resultado
+      através do parâmetro do "tren", e pedimos para retornar como .jason(), que
+      também é uma função assíncrona, que funciona como promise. Colocamos outro
+      "then" para definir o que deve ser feito para quando .json, pegamos o
+      resultamos através do parâmetro (data), e chamamos a função showData, com
+      o parâmetro "data". Esse parâmetro será criado a seguir, e nele podemos
+      definir o que será impresso em uma div HTML previamente criada com o id =
+      "user". No caso do exemplo, será impresso o login e o nome.
+    </p>
+    <h3>Promises</h3>
+    <p>
+      Promisses são construções cuja execução retorna algo no futuro, ou seja, é
+      uma promessa de execução. A execução pode ser resolvida (ok), ou rejeitada
+      (erro).
+    </p>
+    <p>
+      A primisse resolvida é interceptada com <strong>then</strong>, e a
+      promisse rejeitada é interceptada com <strong>catch</strong>. E isso
+      resolve parcilamente o problema do <strong>callback hell</strong>.
+    </p>
+    <h3>Async/await</h3>
+    <p>
+      O que a gente tem de mais moderno nesse tipo de escrita, é o Async/await.
+    </p>
+    <p>
+      Considerado um "açúcar sintático" (syntax sugar), pois melhora a
+      legibilidade do código e dá a impressão de código síncrono
+    </p>
+    <p>
+      Deve-se decorar a função com async, e toda instrução relacionada à promise
+      deve ser precidade de await.
+    </p>
   </body>
 </html>
