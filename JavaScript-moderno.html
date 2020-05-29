@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Moderno</title>
+  </head>
+  <body>
+    <h1>JavaScript Moderno</h1>
+
+    <h2>Introdução</h2>
+
+    <p>
+      A partir da versão EC6+ (ECMAScript 6 plus) já é considerado JavaScript
+      Moderno. Já as versões anteriores são as mais compatíveis com os
+      navegadores.
+    </p>
+    <p>
+      O ECMAScript está em constante evolução, já os navegadores precisam se
+      adequar de uma forma mais lenta, pois caso contrário, haveria o risco de
+      "quebrar" a internet. Para resolver essa incopatibilidade, é possível faz
+      uso dos transpiladores (parecido com compiladores, mas em vez de
+      traduzirem o código para linguagem de máquina, eles traduzem a linguagem
+      para ela mesma em uma versão anterior). Dois exemplos de transpiladores
+      são o Babel e o TypeScript. O Google Chrome geralmente suporta as
+      "modernidades" do JS. A vantagem do frameworks é que eles já vem com os
+      transpiladores configurados.
+    </p>
+    <h3>Let, Const e Var</h3>
+    <p>
+      No JS moderno aparece as construções <em>const</em> e <em>let</em>, que a
+      princípio tem a mesma função do <em>var</em>, O problema do var é que eles
+      possui um escopo amplo. Já o let, é bem parecido com o var, mas tem o
+      escopo mais reduzido.
+    </p>
+    <p>
+      Já const é utilizado para garantir a imutabilidade, já que com ele não é
+      possível atribuir um novo valor à variável. Entretanto, é possível
+      modificar os dados de arrays e objetos.
+    </p>
+    <p>
+      Uma boa prática é sempre começar a declaração com const, trocar por let se
+      for realmente necessário, e evitar o uso de var.
+    </p>
+    <h3>Arrow Functions</h3>
+    <p>
+      É uma forma de escrever funções utilizando uma sintaxe mais simples. Sua
+      escrita é mais declarativa e funcional.
+    </p>
+    <p>Exemplo (primeira função normal, segunda usando arrow function):</p>
+    <code>
+      <pre>
+        const makeBeer = function beerFun(qty){
+          return '&#x1F37A'.repeat(qty);
+        }
+
+
+        const makeBeer = (qty) => '&#x1F37A'.repeat(qty);
+      </pre>
+    </code>
+    <h3>Template Literals</h3>
+    <p>Uma maneira mais simples e elegante de criar Strings a partir de expressões. Para isso, basta utilizar o símbolo de crase `` em vez de aspas simples ou duplas. Desse modo, as expressões JavaScript (valores de variáveis) são escritos entre ${}</p>
+    <h3>Default Parameters</h3>
+    <p>É possível atribuir valores padrão para parâmetros de funções. Em geral, parâmetros com valores padrão devem se situar no final da função.</p>
+    <h3>Comando Use Strict</h3>
+    a linha de comando <code>'use sctrict'</code> pode ser colocada no incício do código ou no início de uma função. Quando ele é utilizado, o JS acha mais erros e interrompe a execução do script.
+  </body>
+</html>
