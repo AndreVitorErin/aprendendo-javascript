@@ -20,5 +20,30 @@
       espere o término de instruções lentas, e a principal técnica para garantir
       que isso acontece é a utilização do <strong>event loop</strong>.
     </p>
+    <h2>Event Loop</h2>
+    <p>
+      As funções a serem executadas ficam em uma pilha lógica de invocações
+      (call stack). Quando a função utiliza Web APIs, ela precisa passar pelo
+      event loop, pois está sujeita à lentidões. O event loop executa uma função
+      por vez e faz a orquestração que permite execução assíncrona.
+    </p>
+    <p>
+      Em genral, função que usam WEB APIs possuem
+      <strong>callbacks</strong> (funções passadas por parâmetros).
+    </p>
+    <h2>Conclusão</h2>
+    <p>
+      O JavaScript é <strong>síncrono</strong> por padrão (ela é uma linguagem
+      interpretada e não compilada), entretando, os ambientes de execução
+      possuem o event loop para prover comportamento
+      <strong>assíncrono</strong>. Função que utilizamo Web APIs utilizam,
+      necessariamente, o evente loop.
+    </p>
+    <p>
+      Em geral, após a execução no event loop, a função executa uma nova função
+      de completude, denominada <strong>callback</strong>, que são funções
+      passadas pos parâmetros em funções que irão utilizar de alguma forma a Web
+      APIs (eventos de DOM, requisições HTTP, timeouts, etc)
+    </p>
   </body>
 </html>
