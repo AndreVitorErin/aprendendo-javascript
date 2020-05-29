@@ -77,5 +77,40 @@
     <li>every - verifica se todos os elementos atendem à proposição</li>
     <li>sort - ordena os elementos com base em um critério</li>    
   </ul>
+  <h2>Rest/Spread e Destructuring</h2>
+  <h3>Operador ... (spread)</h3>
+  <p>Muito útil para trabalhar com arrays e objetos, pois este operador <strong>espalha</strong> os itens do array, que podem ser recuperados para comport outro array. Por exemplos:</p>
+  <code>
+    <pre>
+      const array1 = [1, 2, 3];
+      const array2 = [4, 5, 6];
+      const array3 = [...array1, ...array2];
+    </pre>
+  </code>
+  <p>neste caso, array3 retorna <code>[1, 2, 3, 4, 5, 6]</code></p>
+  <h3>Operador ... (rest)</h3>
+  <p>é comum a utilização de <strong>rest</strong> em funções, agrupando os parâmetros em um array. Sua principal aplicação é permitir funções com número infinito de parâmetros. Por exemplo:</p>
+  <code>
+    <pre>
+      const superSum = (...numbers) => numbers.reduce((acc, curr) => acc + curr, 0);
+
+      superSum(1, 2, 3);
+      6
+
+      superSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000);
+      1155
+    </pre>
+  </code>
+  <h3>Destructuring</h3>
+  <p>Facilita a escrita ao trabalhar com objetos. Torna o código mais claro. Também é possível utilizar essa técnica com array usando o colchete ([]). Por exemplo:</p>
+  <code>
+    <pre>
+      const object = {nome: 'André', idade: 31}
+      const {nome, idade} = object;
+
+      console.log(nome + 'tem' + idade + 'anos');
+      André tem 31 anos
+    </pre>
+  </code>
   
 </html>
